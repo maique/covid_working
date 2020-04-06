@@ -65,7 +65,8 @@ flags = {
 	'Macao' : '🇲🇴',
 	'Mozambique' : '🇲🇿',
 	'Myanmar' : '🇲🇲',
-	'Timor-Leste' : '🇹🇱'
+	'Timor-Leste' : '🇹🇱',
+	'Sao Tome and Principe' : '🇸🇹' 
 }
 
 date_format = '%d-%m-%Y %H:%M'
@@ -92,6 +93,9 @@ while another:
 		
 	if country == 'Uk':
 		country = 'UK'
+
+	if country == 'Stp':
+		country = 'Sao Tome and Principe'	
 		
 #	console.clear()
 		
@@ -102,14 +106,14 @@ while another:
 	my_info = [c for c in info if c['country'] == country]
 	if my_info:
 		print('\n>> '+'🦠'+ flag + ' ' + f'Covid-19 {country} Report\n>> {date_str}\n')
-		print(f'📈 Cases so far in {country}: {my_info[0] ["cases"]}')
-		print(f'📈 Cases today in {country}: {my_info[0] ["todayCases"]}')
-		print(f'📊 Cases per million in {country}: {my_info[0] ["casesPerOneMillion"]}\n')
-		print(f'😱 Critical in {country}: {my_info[0] ["critical"]}')
-		print(f'😎 Recovered so far in {country}: {my_info[0] ["recovered"]}\n')
-		print(f'💀 Deaths so far in {country}: {my_info[0] ["deaths"]}')
-		print(f'💀 Deaths today in {country}: {my_info[0] ["todayDeaths"]}')
-		print(f'💀 Deaths per million in {country}: {my_info[0] ["deathsPerOneMillion"]}')
+		print(f'📈 Cases so far in {country}: ' + R + f'{my_info[0] ["cases"]}' + W)
+		print(f'📈 Cases today in {country}: ' + R + f'{my_info[0] ["todayCases"]}' + W)
+		print(f'📊 Cases per million in {country}: ' + R + f'{my_info[0] ["casesPerOneMillion"]}\n' + W)
+		print(f'😱 Critical in {country}: ' + R + f'{my_info[0] ["critical"]}' + W)
+		print(f'😎 Recovered so far in {country}: ' + R + f'{my_info[0] ["recovered"]}\n' + W)
+		print(f'💀 Deaths so far in {country}: ' + R + f'{my_info[0] ["deaths"]}' + W)
+		print(f'💀 Deaths today in {country}: ' + R + f'{my_info[0] ["todayDeaths"]}' + W)
+		print(f'💀 Deaths per million in {country}: ' + R + f'{my_info[0] ["deathsPerOneMillion"]}' + W)
 		
 		percent = (int(my_info[0] ["deaths"]) / int(my_info[0] ["cases"])) * 100
 
