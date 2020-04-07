@@ -121,7 +121,7 @@ while another:
 	info = r.json()
 	my_info = [c for c in info if c['country'] == country]
 	if my_info:
-		print('\n>> '+'🦠'+ flag + ' ' + f'Covid-19 {country} Report\n>> {date_str}\n')
+		print('\n>> '+' 🦠 '+ flag + '  ' + f'Covid-19 {country} Report\n>> {date_str}\n')
 		print(f'📈 Cases so far in {country}: ' + R + f'{my_info[0] ["cases"]}' + W)
 		print(f'📈 Cases today in {country}: ' + R + f'{my_info[0] ["todayCases"]}' + W)
 		print(f'📊 Cases per million in {country}: ' + R + f'{my_info[0] ["casesPerOneMillion"]}\n' + W)
@@ -137,11 +137,17 @@ while another:
 	else:
 		print(f'No data for {country}')
 	
-	go_again = input('Wanna go again? (y/n)')
-	if go_again == 'y':
+	go_again = input('Wanna go again? (y/n)').title()
+	if go_again != 'N':
 		another = True
 	else:
 		another = False
 		os.system('clear')
 #		console.clear()
+		print('                 _     _       __  ___   ')
+		print('                (_)   | |     /_ |/ _ \  ')
+		print('   ___ _____   ___  __| |______| | (_) | ')
+		print('  / __/ _ \ \ / / |/ _` |______| |\__, | ')
+		print(' | (__ (_) \ V /| | (_| |      | |  / /  ')
+		print('  \___\___/ \_/ |_|\__,_|      |_| /_/   \n')
 		print('See you soon.\nStay Safe.\n\n#stayTheFuckHome\n'+'🦠🇺🇳🏳️‍🌈\n\n')
