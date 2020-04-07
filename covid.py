@@ -83,6 +83,22 @@ while another:
 	os.system('clear')	
 #	console.clear()
 
+	print('                 _     _       __  ___   ')
+	print('                (_)   | |     /_ |/ _ \  ')
+	print('   ___ _____   ___  __| |______| | (_) | ')
+	print('  / __/ _ \ \ / / |/ _` |______| |\__, | ')
+	print(' | (__ (_) \ V /| | (_| |      | |  / /  ')
+	print('  \___\___/ \_/ |_|\__,_|      |_| /_/   \n')
+
+	#print('              #    #              ')
+	#print('                   #       #  ##  ')
+	#print(' ##  ##  #  # #  ###      ## #  # ')
+	#print('#   #  # #  # # #  #       # #  # ')
+	#print('#   #  # #  # # #  # ####  #  ### ')
+	#print('#   #  # # #  # #  #       #    # ')
+	#print(' ##  ##   #   #  ###       #  ##  ')
+
+
 	country = input('Enter country: ').title()
 
 	if country == '':
