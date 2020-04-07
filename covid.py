@@ -74,7 +74,8 @@ flags = {
 	'Mozambique' : '🇲🇿',
 	'Myanmar' : '🇲🇲',
 	'Timor-Leste' : '🇹🇱',
-	'Sao Tome and Principe' : '🇸🇹' 
+	'Sao Tome and Principe' : '🇸🇹',
+	'Mexico' : '🇲🇽'
 }
 
 date_format = '%d-%m-%Y %H:%M'
@@ -109,7 +110,7 @@ while another:
 		
 #	console.clear()
 	banner()		
-	flag = flags.get(str(country), '🇺🇳🏳️‍🌈')
+	flag = flags.get(str(country), ' 🇺🇳  🏳️‍🌈')
 
 	r = requests.get('https://corona.lmao.ninja/countries')
 	info = r.json()
