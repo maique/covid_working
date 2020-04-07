@@ -3,6 +3,7 @@ from datetime import datetime
 import os
 
 def banner():
+	os.system('clear')
 	print('                 _     _       __  ___   ')
 	print('                (_)   | |     /_ |/ _ \  ')
 	print('   ___ _____   ___  __| |______| | (_) | ')
@@ -87,25 +88,9 @@ go_again = 'y'
 
 while another:
 
-	os.system('clear')	
 #	console.clear()
 
 	banner()
-
-	#print('                 _     _       __  ___   ')
-	#print('                (_)   | |     /_ |/ _ \  ')
-	#print('   ___ _____   ___  __| |______| | (_) | ')
-	#print('  / __/ _ \ \ / / |/ _` |______| |\__, | ')
-	#print(' | (__ (_) \ V /| | (_| |      | |  / /  ')
-	#print('  \___\___/ \_/ |_|\__,_|      |_| /_/   \n')
-
-	#print('              #    #              ')
-	#print('                   #       #  ##  ')
-	#print(' ##  ##  #  # #  ###      ## #  # ')
-	#print('#   #  # #  # # #  #       # #  # ')
-	#print('#   #  # #  # # #  # ####  #  ### ')
-	#print('#   #  # # #  # #  #       #    # ')
-	#print(' ##  ##   #   #  ###       #  ##  ')
 
 
 	country = input('Enter country: ').title()
@@ -123,8 +108,6 @@ while another:
 		country = 'Sao Tome and Principe'	
 		
 #	console.clear()
-	os.system('clear')	
-
 	banner()		
 	flag = flags.get(str(country), '🇺🇳🏳️‍🌈')
 
@@ -153,7 +136,6 @@ while another:
 		another = True
 	else:
 		another = False
-		os.system('clear')
 #		console.clear()
 		banner()
 		print('See you soon.\nStay Safe.\n\n#stayTheFuckHome\n'+'🦠🇺🇳🏳️‍🌈\n\n')
