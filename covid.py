@@ -2,6 +2,13 @@ import requests
 from datetime import datetime
 import os
 
+def banner():
+	print('                 _     _       __  ___   ')
+	print('                (_)   | |     /_ |/ _ \  ')
+	print('   ___ _____   ___  __| |______| | (_) | ')
+	print('  / __/ _ \ \ / / |/ _` |______| |\__, | ')
+	print(' | (__ (_) \ V /| | (_| |      | |  / /  ')
+	print('  \___\___/ \_/ |_|\__,_|      |_| /_/   \n')
 
 #define colors
 W  = '\033[0m'  # white (normal)
@@ -83,12 +90,14 @@ while another:
 	os.system('clear')	
 #	console.clear()
 
-	print('                 _     _       __  ___   ')
-	print('                (_)   | |     /_ |/ _ \  ')
-	print('   ___ _____   ___  __| |______| | (_) | ')
-	print('  / __/ _ \ \ / / |/ _` |______| |\__, | ')
-	print(' | (__ (_) \ V /| | (_| |      | |  / /  ')
-	print('  \___\___/ \_/ |_|\__,_|      |_| /_/   \n')
+	banner()
+
+	#print('                 _     _       __  ___   ')
+	#print('                (_)   | |     /_ |/ _ \  ')
+	#print('   ___ _____   ___  __| |______| | (_) | ')
+	#print('  / __/ _ \ \ / / |/ _` |______| |\__, | ')
+	#print(' | (__ (_) \ V /| | (_| |      | |  / /  ')
+	#print('  \___\___/ \_/ |_|\__,_|      |_| /_/   \n')
 
 	#print('              #    #              ')
 	#print('                   #       #  ##  ')
@@ -114,7 +123,9 @@ while another:
 		country = 'Sao Tome and Principe'	
 		
 #	console.clear()
-		
+	os.system('clear')	
+
+	banner()		
 	flag = flags.get(str(country), '🇺🇳🏳️‍🌈')
 
 	r = requests.get('https://corona.lmao.ninja/countries')
@@ -144,10 +155,5 @@ while another:
 		another = False
 		os.system('clear')
 #		console.clear()
-		print('                 _     _       __  ___   ')
-		print('                (_)   | |     /_ |/ _ \  ')
-		print('   ___ _____   ___  __| |______| | (_) | ')
-		print('  / __/ _ \ \ / / |/ _` |______| |\__, | ')
-		print(' | (__ (_) \ V /| | (_| |      | |  / /  ')
-		print('  \___\___/ \_/ |_|\__,_|      |_| /_/   \n')
+		banner()
 		print('See you soon.\nStay Safe.\n\n#stayTheFuckHome\n'+'🦠🇺🇳🏳️‍🌈\n\n')
