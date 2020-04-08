@@ -127,7 +127,7 @@ while another:
 		print(f'>> Critical in {country}: ' + R + f'{my_info[0] ["critical"]}' + W)
 		print(f'>> Recovered so far in {country}: ' + R + f'{my_info[0] ["recovered"]}\n' + W)
 
-		print(f'>> Tests in {country}: ' + R + f'{my_info[0] ["tests"]}\n' + W)
+		print(f'>> Tested in {country}: ' + R + f'{my_info[0] ["tests"]}\n' + W)
 
 		print(f'>> Cases per million in {country}: ' + R + f'{my_info[0] ["casesPerOneMillion"]}' + W)
 		print(f'>> Deaths per million in {country}: ' + R + f'{my_info[0] ["deathsPerOneMillion"]}' + W)
