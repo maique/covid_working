@@ -119,7 +119,7 @@ while another:
 		print(f'>> Cases today in {country}: ' + R + f'{my_info[0] ["todayCases"]}' + W)
 		print(f'>> Deaths today in {country}: ' + R + f'{my_info[0] ["todayDeaths"]}\n' + W)
 
-		print(R + '>>Totals' + W)
+		print(R + '>>Totals:' + W)
 		print(f'>> Cases so far in {country}: ' + R + f'{my_info[0] ["cases"]}' + W)
 		print(f'>> Deaths so far in {country}: ' + R + f'{my_info[0] ["deaths"]}\n' + W)
 		
