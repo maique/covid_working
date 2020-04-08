@@ -9,7 +9,6 @@ def white():
 	console.set_color(1, 1, 1)	
 
 def banner():
-#	os.system('clear')
 	console.clear()
 	print('                 _     _       __  ___   ')
 	print('                (_)   | |     /_ |/ _ \  ')
@@ -89,7 +88,6 @@ go_again = 'y'
 
 while another:
 	
-	#console.clear()
 	banner()
 
 	country = input('Enter country: ').title()
@@ -187,6 +185,5 @@ while another:
 		another = True
 	else:
 		another = False
-		#console.clear()
 		banner()
 		print('See you soon.\nStay Safe.\n\n#stayTheFuckHome\n'+'🦠🇺🇳🏳️‍🌈')
