@@ -106,7 +106,10 @@ while another:
 		country = 'UK'
 
 	if country == 'Stp':
-		country = 'Sao Tome and Principe'	
+		country = 'Sao Tome and Principe'
+
+	if country == 'Hk':
+		country = 'Hong Kong'	
 		
 #	console.clear()
 	banner()		
@@ -116,19 +119,28 @@ while another:
 	info = r.json()
 	my_info = [c for c in info if c['country'] == country]
 	if my_info:
-		print('\n>> '+' 🦠 '+ flag + '  ' + f'Covid-19 {country} Report\n>> {date_str}\n')
-		print(f'📈 Cases so far in {country}: ' + R + f'{my_info[0] ["cases"]}' + W)
-		print(f'📈 Cases today in {country}: ' + R + f'{my_info[0] ["todayCases"]}' + W)
-		print(f'📊 Cases per million in {country}: ' + R + f'{my_info[0] ["casesPerOneMillion"]}\n' + W)
-		print(f'😱 Critical in {country}: ' + R + f'{my_info[0] ["critical"]}' + W)
-		print(f'😎 Recovered so far in {country}: ' + R + f'{my_info[0] ["recovered"]}\n' + W)
-		print(f'💀 Deaths so far in {country}: ' + R + f'{my_info[0] ["deaths"]}' + W)
-		print(f'💀 Deaths today in {country}: ' + R + f'{my_info[0] ["todayDeaths"]}' + W)
-		print(f'💀 Deaths per million in {country}: ' + R + f'{my_info[0] ["deathsPerOneMillion"]}' + W)
+		print('\n>> '+'🦠 '+ flag + '  ' + f'Covid-19 {country} Report\n>> {date_str}\n')
+		print(R + '>> Today:' + W)
+		print(f'>> Cases today in {country}: ' + R + f'{my_info[0] ["todayCases"]}' + W)
+		print(f'>> Deaths today in {country}: ' + R + f'{my_info[0] ["todayDeaths"]}\n' + W)
+
+		print(R + '>>Totals' + W)
+		print(f'>> Cases so far in {country}: ' + R + f'{my_info[0] ["cases"]}' + W)
+		print(f'>> Deaths so far in {country}: ' + R + f'{my_info[0] ["deaths"]}\n' + W)
+		
+		print(f'>> Active in {country}: ' + R + f'{my_info[0] ["active"]}' + W)
+		print(f'>> Critical in {country}: ' + R + f'{my_info[0] ["critical"]}' + W)
+		print(f'>> Recovered so far in {country}: ' + R + f'{my_info[0] ["recovered"]}\n' + W)
+
+		print(f'>> Tests in {country}: ' + R + f'{my_info[0] ["tests"]}\n' + W)
+
+		print(f'>> Cases per million in {country}: ' + R + f'{my_info[0] ["casesPerOneMillion"]}' + W)
+		print(f'>> Deaths per million in {country}: ' + R + f'{my_info[0] ["deathsPerOneMillion"]}' + W)
+		print(f'>> Tests per million in {country}: ' + R + f'{my_info[0] ["testsPerOneMillion"]}\n' + W)
 		
 		percent = (int(my_info[0] ["deaths"]) / int(my_info[0] ["cases"])) * 100
 
-		print(R + '💀 Percent: ' + str("%.2f" % percent) + '%\n' + W)
+		print(R + '>> Percent: ' + str("%.2f" % percent) + '%\n' + W)
 	else:
 		print(f'No data for {country}')
 	
@@ -139,4 +151,4 @@ while another:
 		another = False
 #		console.clear()
 		banner()
-		print('See you soon.\nStay Safe.\n\n#stayTheFuckHome\n'+'🦠🇺🇳🏳️‍🌈\n\n')
+		print('See you soon.\nStay Safe.\n\n#stayTheFuckHome\n'+'🦠 🇺🇳  🏳️‍🌈\n\n')
