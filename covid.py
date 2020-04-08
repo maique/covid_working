@@ -4,6 +4,7 @@ import os
 
 def banner():
 	os.system('clear')
+#	console.clear()
 	print('                 _     _       __  ___   ')
 	print('                (_)   | |     /_ |/ _ \  ')
 	print('   ___ _____   ___  __| |______| | (_) | ')
@@ -85,14 +86,9 @@ date_str = now.strftime(date_format)
 another = True
 go_again = 'y'
 
-
-
 while another:
 
-#	console.clear()
-
 	banner()
-
 
 	country = input('Enter country: ').title()
 
@@ -111,7 +107,6 @@ while another:
 	if country == 'Hk':
 		country = 'Hong Kong'	
 		
-#	console.clear()
 	banner()		
 	flag = flags.get(str(country), ' 🇺🇳  🏳️‍🌈')
 
@@ -149,6 +144,5 @@ while another:
 		another = True
 	else:
 		another = False
-#		console.clear()
 		banner()
 		print('See you soon.\nStay Safe.\n\n#stayTheFuckHome\n'+'🦠 🇺🇳  🏳️‍🌈\n\n')
