@@ -3,7 +3,7 @@ from datetime import datetime
 import console
 
 def red():
-	console.set_color(1, 0, 0)
+	console.set_color(0.91372549, 0.466666667, 0.51372549)
 
 def white():
 	console.set_color(1, 1, 1)	
