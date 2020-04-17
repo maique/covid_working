@@ -110,7 +110,7 @@ while another:
 	banner()		
 	flag = flags.get(str(country), ' 🇺🇳  🏳️‍🌈')
 
-	r = requests.get('https://corona.lmao.ninja/countries')
+	r = requests.get('https://corona.lmao.ninja/v2/countries')
 	info = r.json()
 	my_info = [c for c in info if c['country'] == country]
 	if my_info:
