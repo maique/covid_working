@@ -79,9 +79,7 @@ flags = {
 	'Sao Tome and Principe' : '🇸🇹'
 }
 
-date_format = '%d-%m-%Y %H:%M'
-now = datetime.now()
-date_str = now.strftime(date_format)
+
 
 another = True
 go_again = 'y'
@@ -89,6 +87,9 @@ go_again = 'y'
 while another:
 	
 	banner()
+	date_format = '%d-%m-%Y %H:%M'
+	now = datetime.now()
+	date_str = now.strftime(date_format)
 
 	country = input('Enter country: ').title()
 
